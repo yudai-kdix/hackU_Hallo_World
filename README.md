@@ -1,24 +1,5 @@
-# README
+# hackU_Hallo_World
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt](tmp.png)
+>>>>>>> 438954db07be7c30c341e57175cd68efeb0c4822
