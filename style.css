@@ -14,20 +14,20 @@ select{
     width: 150px;
     height: 40px;
 }
-.grade{
+/* .grade{
     position: absolute;
     top: 30px;
     left: 20%;
-}
+} */
 .subject{
     position: absolute;
     top: 30px;
-    left: 40%;
+    left: 55%;
 }
 .search{
     position: absolute;
     top: 30px;
-    left: 60%;
+    left: 70%;
 }
 .new{
     position: absolute;
