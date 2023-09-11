@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>新規作成</title>
+    <link rel="stylesheet" href="Chatgpteditstyle.css" ></link>
+    <script src="./Chatgpteditjs.js">
+    </script>
+  </head>
+<body>
+  <p>問題の傾向を選択してください</p>
+  <select name="question">
+    <option value="choice">四択問題</option>
+    <option value="writing">記述問題</option>
+    <option value="fill_in">穴埋め問題</option>
+  </select>
+  <p>AIに聞く文章を書く欄<br>
+    <textarea cols="50" rows="5">テキストを追加</textarea>
+  </p>
+  <p>AIが作った問題<br>
+    <!-- <textarea id="copy-textarea" cols="50" rows="5">テキストを追加</textarea>
+  </p>
+  <button onClick="copy()">コピー</button> -->
+  <div class="input-container">
+    <!-- <input type="text" id="copyText" placeholder="入力してください。" /> -->
+    <textarea id="copyText" cols="50" rows="5">テキストを追加</textarea><br>
+    <button onclick="copyToClipboard(this)">
+      Copy Text
+    </button>
+  </div>
+</body>
