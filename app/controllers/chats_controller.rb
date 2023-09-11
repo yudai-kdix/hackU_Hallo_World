@@ -2,8 +2,11 @@ class ChatsController < GptController
 
     def index
     end
+
+    def Chatgptedit
+    end
   
-    # 入力したテキストに対して返答
+ 
     def search
       @query = params[:query]
   
