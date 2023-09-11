@@ -1,0 +1,16 @@
+.toolbar {
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+.toolbar button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#editor {
+    margin-top: 10px;
+    padding: 10px;
+}
