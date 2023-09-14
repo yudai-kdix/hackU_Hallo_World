@@ -15,17 +15,17 @@
     <option value="fill_in">穴埋め問題</option>
   </select>
   <p>AIに聞く文章を書く欄<br>
-    <textarea cols="50" rows="5">テキストを追加</textarea>
   </p>
-  <p>AIが作った問題<br>
-    <!-- <textarea id="copy-textarea" cols="50" rows="5">テキストを追加</textarea>
-  </p>
-  <button onClick="copy()">コピー</button> -->
-  <div class="input-container">
-    <!-- <input type="text" id="copyText" placeholder="入力してください。" /> -->
-    <textarea id="copyText" cols="50" rows="5">テキストを追加</textarea>
-    <button onclick="copyToClipboard(this)">
-      Copy Text
-    </button>
-  </div>
+  <%= form_with(url: chats_create_path , method: :post) do |form| %>
+  <%= form.text_field :query, size: 50%>
+  <%= form.submit "検索" %>
+<% end %>
+
+<p>AIが作った問題<br>
+<div class="input-container">
+  <textarea id="copyText" cols="50" rows="5"> <%= @chats %> </textarea>
+  <button onclick="copyToClipboard(this)">
+    Copy Text
+  </button>
+</div>
 </body>

@@ -2,7 +2,6 @@ class PrintsController < ApplicationController
     def index
         @prints=Print.all
     end
-
     def new
     end
 
