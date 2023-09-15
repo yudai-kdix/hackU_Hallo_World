@@ -25,7 +25,7 @@
   <%= form.select :question, [["四択問題", "四択問題"], ["記述問題", "記述問題"], ["穴埋め問題", "穴埋め問題"], ["計算問題", "計算問題"]], include_blank: "選択して下さい" %>
   <p>AIに聞く文章を書く欄<br>
   </p>
-  <%= form.text_field :query, size: 50%>
+  <%= form.text_field :query, size: 55%>
   <%= form.submit "検索" %>
 <% end %>
 
@@ -37,11 +37,11 @@
   </button>
 </div>
 <%= form_with(url: chats_index_path , method: :get) do |form| %>
-  <%= form.text_field :question1, size: 50%>
-  <%= form.text_field :question2, size: 50%>
-  <%= form.text_field :question3, size: 50%>
-  <%= form.text_field :question4, size: 50%>
-  <%= form.text_field :question5, size: 50%>
+  <%= form.text_area :question1, cols:50, rows:5%><br>
+  <%= form.text_area :question2%><br>
+  <%= form.text_area :question3%><br>
+  <%= form.text_area :question4%><br>
+  <%= form.text_area :question5%><br>
 <%= link_to "PDF出力", chats_index_path, method: :get %>
 <% end %>
 </body>
