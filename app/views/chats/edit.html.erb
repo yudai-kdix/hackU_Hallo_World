@@ -4,7 +4,7 @@
 <%= form.select :question, [["四択問題", "四択問題"], ["記述問題", "記述問題"], ["穴埋め問題", "穴埋め問題"], ["計算問題", "計算問題"]], include_blank: "選択して下さい" %>
 <p>AIに聞く文章を書く欄<br>
 </p>
-<%= form.text_field :query, size: 50%>
+<%= form.text_field :query, size: 55%>
 <%= form.submit "検索" %>
 <% end %>
 
@@ -15,11 +15,28 @@
 Copy Text
 </button>
 </div>
+<p class="p">プリント作成</p>
+<div class="print">
 <%= form_with(url: chats_index_path , method: :get) do |form| %>
-<%= form.text_field :question1, size: 50%>
-<%= form.text_field :question2, size: 50%>
-<%= form.text_field :question3, size: 50%>
-<%= form.text_field :question4, size: 50%>
-<%= form.text_field :question5, size: 50%>
+<div class="name">
+<p>名前
+<%= form.text_field :question1, size:55%><br>
+</p>
+</div>
+<div class="top">
+<%= form.text_area :question1, cols:100, rows:5%><br>
+</div>
+<div class="answer">
+<%= form.text_area :question2, cols:50, rows:5%><br>
+</div>
+<%= form.text_area :question3, cols:100, rows:5%><br>
+<div class="answer">
+<%= form.text_area :question4, cols:50, rows:5%><br>
+</div>
+<%= form.text_area :question5, cols:100, rows:5%><br>
+<div class="answer">
+<%= form.text_area :question6, cols:50, rows:5%><br>
+</div>
+</div>
 <%= link_to "PDF出力", chats_index_path, method: :get %>
 <% end %>
