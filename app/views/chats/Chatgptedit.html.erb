@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>B5エディタ</title>
-    <style>
-        @page {
-            size: B5;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .editor {
-            width: 100%;
-            height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .header{
-            width: 100%;
-            height: 100px;
-            border: solid;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>新規作成</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+  async function copyToClipboard(obj) {
+    const element = obj.previousElementSibling;
+    // クリップボードAPIが使え、且つ、値が空でない時
+    if (navigator.clipboard && !element.value == false) {
+      await navigator.clipboard.writeText(element.value);
+      alert("コピーされました！");
+    } else {
+      alert("コピーされませんでした！");
+    }
+  }
+  </script>
 </head>
-<body>
     <div class="editor" contenteditable="true" id="editor">
         <div class="header"></div>
         <input type="text" id="title" value="タイトル">
