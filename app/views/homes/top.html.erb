@@ -1,4 +1,6 @@
 <h1>教材作成アプリへようこそ！</h1>
+<% if user_signed_in? %>
+<%= link_to "新規作成！", chats_edit_path, class: "editbotton" %>
+<% else %>
 <p>使用の前にログインをお願いします</p>
-
-<%= link_to "Edit", chats_edit_path, class: "editbotton" %>
+<% end %>
