@@ -36,7 +36,12 @@
     Copy Text
   </button>
 </div>
-<iframe src="/chat.html" width="80%" height="500px"></iframe>
+<%= form_with(url: chats_index_path , method: :get) do |form| %>
+  <%= form.text_field :question1, size: 50%>
+  <%= form.text_field :question2, size: 50%>
+  <%= form.text_field :question3, size: 50%>
+  <%= form.text_field :question4, size: 50%>
+  <%= form.text_field :question5, size: 50%>
 <%= link_to "PDF出力", chats_index_path, method: :get %>
 </body>
 
