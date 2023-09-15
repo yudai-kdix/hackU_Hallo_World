@@ -73,3 +73,8 @@ group :test do
 end
 
 gem 'devise'
+
+gem 'byebug'
+
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'

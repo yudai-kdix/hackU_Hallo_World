@@ -1,4 +1,4 @@
-header{
+/* header{
     background-color: aqua;
     width: 100%;
     height: 100px;
@@ -19,7 +19,7 @@ select{
     top: 30px;
     left: 20%;
 } */
-.subject{
+/* .subject{
     position: absolute;
     top: 30px;
     left: 55%;
@@ -60,7 +60,7 @@ input {
   align-items: center;
   position: relative;
   z-index: 100;/* 重なり順を一番上にする */
-  cursor: pointer;
+  /* cursor: pointer;
 }
 .drawer_open span,
 .drawer_open span:before,
@@ -93,13 +93,13 @@ input {
 }
   
 /* メニューのデザイン*/
-.nav_content {
+/* .nav_content {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 100%; /* メニューを画面の外に飛ばす */
-  z-index: 99;
+  /* z-index: 99;
   background: #fff;
   transition: .5s;
 }
@@ -109,9 +109,9 @@ input {
 }
 
 /* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .nav_content {
+/* #drawer_input:checked ~ .nav_content {
   left: 0;/* メニューを画面に入れる */
-}
+/* }
 .template{
     width: 20%;
     height: auto;
@@ -120,4 +120,4 @@ input {
 }
 .image-list :nth-child(4n-3){
     margin-left: 3%;
-}
+}  */ 

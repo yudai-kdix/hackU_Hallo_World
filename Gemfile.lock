@@ -73,6 +73,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.39.2)
       addressable
       matrix
@@ -147,6 +148,7 @@ GEM
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pdfkit (0.8.7.3)
     psych (5.1.0)
       stringio
     public_suffix (5.0.3)
@@ -237,6 +239,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wkhtmltopdf-binary (0.12.6.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.11)
@@ -247,12 +250,14 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  byebug
   capybara
   debug
   devise
   dotenv-rails
   importmap-rails
   jbuilder
+  pdfkit
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)
   ruby-openai
@@ -264,6 +269,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  wkhtmltopdf-binary
 
 RUBY VERSION
    ruby 3.1.4p223
