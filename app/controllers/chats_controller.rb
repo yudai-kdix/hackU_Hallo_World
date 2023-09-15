@@ -9,7 +9,6 @@ class ChatsController < GptController
     end
 
     def edit
-      render 'edit', layout: 'application'
     end
   
     def search
@@ -22,6 +21,7 @@ class ChatsController < GptController
         })
   
       @chats = response.dig("choices", 0, "message", "content")
+      put @chats
       render :edit, layout: 'application'
     end
 
@@ -47,6 +47,6 @@ class ChatsController < GptController
       )
 
       @chats = response.dig('choices', 0, 'message', "content")
-      render :edit
+      render :edit, layout: 'application'
     end
   end
