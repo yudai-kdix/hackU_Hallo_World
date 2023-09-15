@@ -8,7 +8,8 @@ class ChatsController < GptController
     send_data kit.to_pdf, filename: 'print.pdf', type: 'application/pdf'
     end
 
-    def Chatgptedit
+    def edit
+      render 'edit', layout: 'application'
     end
   
     def search
@@ -21,8 +22,7 @@ class ChatsController < GptController
         })
   
       @chats = response.dig("choices", 0, "message", "content")
-      render :Chatgptedit
-      
+      render :edit, layout: 'application'
     end
 
     def create

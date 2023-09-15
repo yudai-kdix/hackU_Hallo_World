@@ -8,6 +8,18 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script>
+  async function copyToClipboard(obj) {
+    const element = obj.previousElementSibling;
+    // クリップボードAPIが使え、且つ、値が空でない時
+    if (navigator.clipboard && !element.value == false) {
+      await navigator.clipboard.writeText(element.value);
+      alert("コピーされました！");
+    } else {
+      alert("コピーされませんでした！");
+    }
+  }
+  </script>
   </head>
 
   <body>
