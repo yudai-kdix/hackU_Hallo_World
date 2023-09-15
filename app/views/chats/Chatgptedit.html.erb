@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>新規作成</title>
-    <link rel="stylesheet" href="Chatgpteditstyle.css" ></link>
-    <script src="./Chatgpteditjs.js">
-    </script>
-  </head>
-<body>
+
   <p>問題の傾向を選択してください</p>
   <select name="question">
     <option value="choice">四択問題</option>
@@ -18,8 +9,8 @@
     <textarea cols="50" rows="5">テキストを追加</textarea>
   </p>
   <%= form_with(url: chats_search_path , method: :get) do |form| %>
-  <%= form.text_field :query, size: 50 %>
-  <%= form.submit "検索" %>
+    <%= form.text_field :query, size: 50 %>
+    <%= form.submit "検索" %>
   <% end %>
   <p>AIが作った問題<br>
     <!-- <textarea id="copy-textarea" cols="50" rows="5">テキストを追加</textarea>
@@ -34,4 +25,3 @@
       Copy Text
     </button>
   </div>
-</body>
