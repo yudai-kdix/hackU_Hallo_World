@@ -1,4 +1,4 @@
-<%= form_with(url: chats_create_path , method: :post) do |form| %>
+<%= form_with(url: chats_create_path , method: :post, data: { turbo: false }) do |form| %>
 <p>問題の傾向を選択してください<br>
 </p>
 <%= form.select :question, [["四択問題", "四択問題"], ["記述問題", "記述問題"], ["穴埋め問題", "穴埋め問題"], ["計算問題", "計算問題"]], include_blank: "選択して下さい" %>

@@ -9,6 +9,7 @@ class ChatsController < GptController
     end
 
     def edit
+      render :edit, layout: 'application'
     end
   
     def search
