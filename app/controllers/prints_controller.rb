@@ -15,6 +15,6 @@ class PrintsController < ApplicationController
     private
 
     def print_params
-        params.require(:print).permit(:)
+        params.require(:print.permit)
     end
 end

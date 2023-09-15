@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'prints/index' => 'prints#index'
   get 'chats/Chatgptedit' => 'chats#Chatgptedit'
   post 'chats/create' => 'chats#create'
-  # get 'chats/create' => 'chats#create'
+  # get 'homes/search' => 'homes#search'
    
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
