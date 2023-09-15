@@ -47,6 +47,6 @@ class ChatsController < GptController
       )
 
       @chats = response.dig('choices', 0, 'message', "content")
-      render :Chatgptedit
+      render :edit
     end
   end
