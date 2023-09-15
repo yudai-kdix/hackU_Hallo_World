@@ -1,0 +1,25 @@
+<%= form_with(url: chats_create_path , method: :post) do |form| %>
+<p>問題の傾向を選択してください<br>
+</p>
+<%= form.select :question, [["四択問題", "四択問題"], ["記述問題", "記述問題"], ["穴埋め問題", "穴埋め問題"], ["計算問題", "計算問題"]], include_blank: "選択して下さい" %>
+<p>AIに聞く文章を書く欄<br>
+</p>
+<%= form.text_field :query, size: 50%>
+<%= form.submit "検索" %>
+<% end %>
+
+<p>AIが作った問題<br>
+<div class="input-container">
+<textarea id="copyText" cols="50" rows="5"> <%= @chats %> </textarea>
+<button onclick="copyToClipboard(this)">
+Copy Text
+</button>
+</div>
+<%= form_with(url: chats_index_path , method: :get) do |form| %>
+<%= form.text_field :question1, size: 50%>
+<%= form.text_field :question2, size: 50%>
+<%= form.text_field :question3, size: 50%>
+<%= form.text_field :question4, size: 50%>
+<%= form.text_field :question5, size: 50%>
+<%= link_to "PDF出力", chats_index_path, method: :get %>
+<% end %>
