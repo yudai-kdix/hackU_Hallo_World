@@ -3,6 +3,7 @@ class CreateChats < ActiveRecord::Migration[7.0]
     create_table :chats do |t|
       t.integer :user_id
       t.string :content
+      
 
       t.timestamps
     end
