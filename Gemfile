@@ -75,3 +75,6 @@ end
 gem 'devise'
 
 gem 'byebug'
+
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'

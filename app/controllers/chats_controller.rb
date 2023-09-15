@@ -1,6 +1,11 @@
 class ChatsController < GptController
 
     def index
+    html = File.read("#{Rails.root}/app/views/chats/chat.html")
+    kit = PDFKit.new(html, :page_size => 'B5')
+    # kit.stylesheets << "#{Rails.root}/public/styles.css"
+    kit.to_file("#{Rails.root}/public/print.pdf")
+    send_data kit.to_pdf, filename: 'print.pdf', type: 'application/pdf'
     end
 
     def Chatgptedit

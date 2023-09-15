@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'prints/index' => 'prints#index'
   get 'chats/Chatgptedit' => 'chats#Chatgptedit'
   post 'chats/create' => 'chats#create'
+  get 'chats/index' => 'chats#index'
   # get 'homes/search' => 'homes#search'
    
   devise_for :users
