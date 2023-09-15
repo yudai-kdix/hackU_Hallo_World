@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'homes#top'
   get 'homes/about'
   get 'prints/index' => 'prints#index'
-  get 'chats/Chatgptedit' => 'chats#Chatgptedit'
+  get 'chats/edit' => 'chats#edit'
   post 'chats/create' => 'chats#create'
   get 'chats/index' => 'chats#index'
    
