@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#top'
-  get 'homes/about'
+  get 'homes/about' => 'homes#top'
   get 'prints/index' => 'prints#index'
   get 'chats/edit' => 'chats#edit'
   post 'chats/create' => 'chats#create'
