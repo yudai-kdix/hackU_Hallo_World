@@ -1,7 +1,7 @@
 class ChatsController < GptController
 
     def index
-    html = File.read("#{Rails.root}/app/views/chats/chat.html")
+    html = File.read("#{Rails.root}/public/chat.html")
     kit = PDFKit.new(html, :page_size => 'B5')
     # kit.stylesheets << "#{Rails.root}/public/styles.css"
     kit.to_file("#{Rails.root}/public/print.pdf")
