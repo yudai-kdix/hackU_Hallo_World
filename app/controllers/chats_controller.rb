@@ -27,7 +27,13 @@ class ChatsController < GptController
       @chat.save
 
       @res = []
-      @res.push({role: "system", content: "私は教員です。あなたは小学生から中学生向けの問題作成を手伝ってください。私が送信する内容に沿った問題を提示してください。" })
+      if test # 選択した内容
+        @res.push({role: "system", content: "私は教員です。あなたは小学生から中学生向けの問題作成を手伝ってください。私が送信する内容に沿った問題を提示してください。" })
+      elsif 
+        @res.push({role: "system", content: "私は教員です。あなたは小学生から中学生向けの問題作成を手伝ってください。私が送信する内容に沿った問題を提示してください。" })
+      else
+        @res.push({role: "system", content: "私は教員です。あなたは小学生から中学生向けの問題作成を手伝ってください。私が送信する内容に沿った問題を提示してください。" })
+      end
       Chat.all.each do |c|
         @res.push({ role: 'user', content: c.content })
       end

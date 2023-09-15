@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>新規作成</title>
-    <link rel="stylesheet" href="Chatgpteditstyle.css" ></link>
-    <script src="./Chatgpteditjs.js">
-    </script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>新規作成</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <p>問題の傾向を選択してください</p>
-  <select name="question">
-    <option value="choice">四択問題</option>
-    <option value="writing">記述問題</option>
-    <option value="fill_in">穴埋め問題</option>
-  </select>
+  <%= form_with(url: chats_create_path , method: :post) do |form| %>
+  <p>問題の傾向を選択してください<br>
+  </p>
+  <%= form.select :question, [["四択問題", "四択問題"], ["記述問題", "記述問題"], ["穴埋め問題", "穴埋め問題"], ["計算問題", "計算問題"]], include_blank: "選択して下さい" %>
   <p>AIに聞く文章を書く欄<br>
   </p>
-  <%= form_with(url: chats_create_path , method: :post) do |form| %>
   <%= form.text_field :query, size: 50%>
   <%= form.submit "検索" %>
 <% end %>
@@ -29,3 +24,4 @@
   </button>
 </div>
 </body>
+</html>
