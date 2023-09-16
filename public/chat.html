@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>B5エディタ</title>
     <style>
-        @page {
-            size: B5;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .editor {
-            width: 100%;
-            height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .header{
-            width: 100%;
-            height: 100px;
-            border: solid;
-        }
+      .question .answer {
+        border: solid;
+      }
+      .b5edit 
+      .print {
+        width: 100%;
+        aspect-ratio: 176 / 250;
+      }
+      .name {
+        width: 40%;
+        height: 70px;
+        border-bottom: solid;
+        margin: auto;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+      .question {
+        width: 55%;
+        height: 120px;
+        border-bottom: solid;
+      }
+      .answer {
+        width: 30%;
+        height: 90px;
+        border-bottom: solid;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: 0;
+      }
     </style>
-</head>
-<body>
-    <div class="editor" contenteditable="true" id="editor">
-        <div class="header"></div>
-        <input type="text" id="title" value="タイトル">
+  </head>
+  <body class="b5edit">
+    <div class="print">
+      <div class="name">名前</div>
+      <div class="question">
+        <h3>問題:
+        </h3>
+      </div>
+      <div class="answer">解答:</div>
+      <div class="question">
+        <h3>問題:</h3>
+      </div>
+      <div class="answer">解答:</div>
+      <div class="question">
+        <h3>問題:</h3>
+      </div>
+      <div class="answer">解答:</div>
     </div>
-    
-</body>
+  </body>
 </html>
