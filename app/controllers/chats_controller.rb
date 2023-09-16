@@ -1,11 +1,18 @@
 class ChatsController < GptController
 
     def index
-    html = File.read("#{Rails.root}/public/chat.html")
-    kit = PDFKit.new(html, :page_size => 'B5')
-    # kit.stylesheets << "#{Rails.root}/public/styles.css"
-    kit.to_file("#{Rails.root}/public/print.pdf")
-    send_data kit.to_pdf, filename: 'print.pdf', type: 'application/pdf'
+      # @question1 = :question1
+      # @question2 = :question2
+      # @question3 = :question3
+      # @question4 = :question4
+      # @question5 = :question5
+      # @question6 = :question6
+      # @question = :question
+      # html = File.read("#{Rails.root}/app/views/chats/index.html.erb")
+      # kit = PDFKit.new(html, :page_size => 'A4')
+      # # kit.stylesheets << "#{Rails.root}/public/styles.css"
+      # kit.to_file("#{Rails.root}/public/print.pdf")
+      # send_data kit.to_pdf, filename: 'print.pdf', type: 'application/pdf'
     end
 
     def edit
@@ -33,7 +40,7 @@ class ChatsController < GptController
       @chat.save
 
       @res = []
-      @res.push({role: "system", content: "私は教員です。あなたは小学生から中学生向けの問題作成を手伝ってください。私が送信する内容に沿った問題を提示してください。" })
+      @res.push({role: "system", content: "私は教員です。私の問題作成を手伝ってください。私が送信する内容に沿った問題を提示してください。" })
       @res.push({role: "system", content: "問題の形式は" + params[:question] + "で出力してください" })
 
       Chat.all.each do |c|

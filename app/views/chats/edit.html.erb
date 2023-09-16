@@ -16,29 +16,34 @@
   </button>
 </div>
 <p class="p">プリント作成</p>
-<div class="print">
-  <%= form_with(url: chats_index_path , method: :get) do |form| %>
-  <div class="name">
-    <p>名前
-    <%= form.text_field :question1, size:55%><br>
-    </p>
-  </div>
-  <div class="top">
-    <%= form.text_area :question1, cols:100, rows:7%><br>
-  </div>
-  <div class="answer">
-    <%= form.text_area :question2, cols:50, rows:5%><br>
-  </div>
-  <%= form.text_area :question3, cols:100, rows:7%><br>
-  <div class="answer">
-    <%= form.text_area :question4, cols:50, rows:5%><br>
-  </div>
-    <%= form.text_area :question5, cols:100, rows:7%><br>
-  <div class="answer">
-    <%= form.text_area :question6, cols:50, rows:5%><br>
-  </div>
+<!--
+# <div class="print">
+#   <%= form_with(url: chats_index_path , method: :get) do |form| %>
+#   <div class="name">
+#     <p>名前
+#     <%= form.text_field :question, size:55%><br>
+#     </p>
+#   </div>
+#   <div class="top">
+#     <%= form.text_area :question1, cols:100, rows:7%><br>
+#   </div>
+#   <div class="answer">
+#     <%= form.text_area :question2, cols:50, rows:5%><br>
+#   </div>
+#   <%= form.text_area :question3, cols:100, rows:7%><br>
+#   <div class="answer">
+#     <%= form.text_area :question4, cols:50, rows:5%><br>
+#   </div>
+#     <%= form.text_area :question5, cols:100, rows:7%><br>
+#   <div class="answer">
+#     <%= form.text_area :question6, cols:50, rows:5%><br>
+#   </div>
+# </div>-->
+<div style="display: flex;
+        justify-content: center;">
+<iframe src="/chat.html" width="60%" style="aspect-ratio: 176 / 250;"></iframe>
 </div>
 <div class="pdf" >
-  <%= link_to "PDF出力", chats_index_path, method: :get%>
+  <%= link_to "編集画面", chats_index_path, method: :get%>
 </div>
 <% end %>

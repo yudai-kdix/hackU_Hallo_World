@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>B5エディタ</title>
+    <style>
+      @page {
+          size: B5;
+      }
+      .question .answer {
+        border: solid;
+      }
+      .print {
+        width: 100%;
+        aspect-ratio: 297 / 420;
+      }
+      .name {
+        width: 40%;
+        height: 70px;
+        border-bottom: solid;
+        margin: auto;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+      .question {
+        width: 55%;
+        height: 100px;
+        border-bottom: solid;
+      }
+      .answer {
+        width: 30%;
+        height: 70px;
+        border-bottom: solid;
+        margin-top: 60px;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body >
+    <div class="print">
+      <div class="name" contentEditable="true">名前 <br><br></div>
+      <div class="question" contentEditable="true">
+        <h3 >問題: <br><br></h3>
+      </div>
+      <div class="answer" contentEditable="true">解答:<br><br> </div>
+      <div class="question"contentEditable="true">
+        <h3 >問題:<br><br></h3>
+      </div>
+      <div class="answer" contentEditable="true">解答:<br><br> </div>
+      <div class="question" contentEditable="true">
+        <h3 >問題:<br><br></h3>
+      </div>
+      <div class="answer" contentEditable="true">解答:<br><br> </div>
+    </div>
+  </body>
+</html>
